@@ -1,0 +1,5 @@
+#add_library(hello_slam_static lib_hello_slam.cc)
+#add_library(hello_slam_shared SHARED lib_hello_slam.cc lib_hello_slam.h use_hello_slam.cc)
+add_library(hello_slam_shared SHARED lib_hello_slam.cc)
+add_executable(use_hello_slam use_hello_slam.cc)
+target_link_libraries(use_hello_slam hello_slam_shared)
